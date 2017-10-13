@@ -21,11 +21,11 @@ export default class OutdoorMovieTheater extends Component {
   constructor(){
     super();
     this.state={
-      mainMenu: true, 
+      mainMenu: true,
       sceneSelect: false,
       rotation: 130,
       zoom: -90,
-    
+
     };
     this.lastUpdate = Date.now();
     this.spaceSkymap = [
@@ -70,7 +70,7 @@ export default class OutdoorMovieTheater extends Component {
       case 3:
         this.setState({ mainMenu: false, sceneSelect: false});
         break;
-        
+
     }
   }
 
@@ -80,9 +80,9 @@ export default class OutdoorMovieTheater extends Component {
     return (
       <View>
 
-        <Pano source={{ uri: this.spaceSkymap }} />  
-          <CylindricalPanel layer={{width: 2160, density: 2160, height: 720,  radius: 50}} 
-          style={{position: 'absolute', 
+        <Pano source={{ uri: this.spaceSkymap }} />
+          <CylindricalPanel layer={{width: 2160, density: 2160, height: 720,  radius: 50}}
+          style={{position: 'absolute',
                }}
            >
 
@@ -95,66 +95,66 @@ export default class OutdoorMovieTheater extends Component {
               justifyContent: 'center',
               flexDirection:'row'
             }}
-          >   
-      
-                  <MovieTheater
-                  style={{
-                          transform: [
-                            {translate: [0, 0, -100]},
-                          ],
-                        }}
-                   film = {'abstract.mp4'}       
-                  />
-               
-                  <MovieTheater
-                  style={{
-                          transform: [
-                            {translate: [0, 0, -100]},
-                          ],
-                        }}
-                   film = {'abstract.mp4'}       
-                  />
-                  <MovieTheater
-                  style={{
-                          transform: [
-                            {translate: [0, 0, -100]},
-                          ],
-                        }}
-                  film = {'bloom.mp4'}       
-                  />
-                  <MovieTheater
-                  style={{
-                          transform: [
-                            {translate: [0, 0, -100]},
-                          ],
-                        }}
-                  film = {'datadl.mp4'}       
-                  />
-                  <MovieTheater
-                  style={{
-                          transform: [
-                            {translate: [0, 0, -100]},
-                          ],
-                        }}
-                   film = {'abstract.mp4'}       
-                  />
-                  <MovieTheater
-                  style={{
-                          transform: [
-                            {translate: [0, 0, -100]},
-                          ],
-                        }}
-                  film = {'bloom.mp4'}       
-                  />       
+          >
 
-            </View>                              
+                  <MovieTheater
+                  style={{
+                          transform: [
+                            {translate: [0, 0, -100]},
+                          ],
+                        }}
+                   film = {'abstract.mp4'}
+                  />
+
+                  <MovieTheater
+                  style={{
+                          transform: [
+                            {translate: [0, 0, -100]},
+                          ],
+                        }}
+                   film = {'abstract.mp4'}
+                  />
+                  <MovieTheater
+                  style={{
+                          transform: [
+                            {translate: [0, 0, -100]},
+                          ],
+                        }}
+                  film = {'bloom.mp4'}
+                  />
+                  <MovieTheater
+                  style={{
+                          transform: [
+                            {translate: [0, 0, -100]},
+                          ],
+                        }}
+                  film = {'datadl.mp4'}
+                  />
+                  <MovieTheater
+                  style={{
+                          transform: [
+                            {translate: [0, 0, -100]},
+                          ],
+                        }}
+                   film = {'abstract.mp4'}
+                  />
+                  <MovieTheater
+                  style={{
+                          transform: [
+                            {translate: [0, 0, -100]},
+                          ],
+                        }}
+                  film = {'bloom.mp4'}
+                  />
+
+            </View>
         </CylindricalPanel>
         <AmbientLight intensity={ 2.6 }  />
                   <Model
                     style={{
                           transform: [
-                            {translate: [0, 0, -10]},
-                            {scale: 0.003 },
+                            {translate: [0, -.02, 0]},
+                            {scale: 0.00003 },
                             {rotateY: this.state.rotation},
                             {rotateX: 20},
                             {rotateZ: -10}
@@ -163,8 +163,8 @@ export default class OutdoorMovieTheater extends Component {
                         source={{obj:asset('earth/earth.obj'), mtl:asset('earth/earth.mtl')}}
                     lit={true}
                   />
-                   
-       
+
+
       </View>
     );
   }
