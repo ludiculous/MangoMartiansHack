@@ -10,7 +10,7 @@ class Movie extends React.Component {
   render() {
     return (
       <View style={{ margin: 0.1, height: 315,}}>
-        <Video style={{height:314}} source={asset(this.props.film)} />
+        <Video style={{height:314}} source={asset(this.props.film)} loop />
       </View>
     )
   }
